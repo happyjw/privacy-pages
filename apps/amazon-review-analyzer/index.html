@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Amazon Review Analyzer</title>
+  <link rel="stylesheet" href="../../shared/policy.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="../../">← All privacy policies</a>
+  </header>
+  <main>
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Amazon Review Analyzer Chrome Extension · Last updated: July 17, 2026</p>
+
+      <p>
+        This Privacy Policy explains how <strong>Amazon Review Analyzer</strong> (“the Extension”, “we”)
+        handles information when you use the Chrome extension. Contact:
+        <a href="mailto:happyjwdev@gmail.com">happyjwdev@gmail.com</a>.
+      </p>
+
+      <h2>1. Summary</h2>
+      <ul>
+        <li>Amazon review content is stored <strong>only on your device</strong> (IndexedDB).</li>
+        <li>We <strong>never</strong> upload your Amazon cookies or session credentials.</li>
+        <li>AI analysis sends selected review text (and product metadata) through our proxy to a language model.</li>
+        <li>Account, quotas, payments, and marketplace votes use cloud services (Supabase, Google, Lemon Squeezy).</li>
+      </ul>
+
+      <h2>2. Data stored on your device</h2>
+      <p>The Extension may store locally:</p>
+      <ul>
+        <li>Scrape jobs, product metadata, reviews, AI reports</li>
+        <li>Preferences (theme, scrape method)</li>
+        <li>An anonymous install identifier for local features</li>
+      </ul>
+      <p>
+        You can delete local tasks/reviews/reports anytime via <strong>Settings → Clear local data</strong>.
+        Uninstalling the Extension also removes its local storage.
+      </p>
+
+      <h2>3. Account &amp; authentication</h2>
+      <p>
+        Sign-in uses <strong>Google OAuth</strong> via Chrome Identity, then creates a session with our
+        backend (<strong>Supabase Auth</strong>). We receive basic account identifiers needed for
+        authentication and quota (e.g. user id, email as provided by Google/Supabase).
+      </p>
+
+      <h2>4. Cloud processing</h2>
+      <p>When signed in, the following may be sent to our servers (Supabase Edge Functions):</p>
+      <ul>
+        <li><strong>Usage / quota</strong>: scrape, export, and AI usage counters</li>
+        <li><strong>Marketplace votes</strong>: which unsupported Amazon site you requested</li>
+        <li><strong>License redemption</strong>: license codes you enter</li>
+        <li><strong>AI analysis</strong>: sampled review text and product fields needed for summaries
+          (via our <code>ai-proxy</code> to a third-party LLM provider)</li>
+        <li><strong>Account deletion</strong>: request to erase your cloud account rows</li>
+      </ul>
+      <p>We do not operate a permanent database of scraped Amazon reviews for advertising or resale.</p>
+
+      <h2>5. Payments</h2>
+      <p>
+        Paid plans are processed by <strong>Lemon Squeezy</strong>. Checkout opens in a separate tab.
+        Lemon Squeezy and its payment processors handle payment details under their own policies.
+        We receive subscription/status events via webhook to unlock Pro features.
+      </p>
+
+      <h2>6. Third-party services</h2>
+      <ul>
+        <li>Google (OAuth)</li>
+        <li>Supabase (auth, database, edge functions)</li>
+        <li>Lemon Squeezy (checkout / subscriptions)</li>
+        <li>LLM provider used by our AI proxy (review text for analysis only)</li>
+        <li>Amazon.com / Amazon.sg pages you browse (scraping runs in your browser tab session)</li>
+      </ul>
+
+      <h2>7. Your choices</h2>
+      <ul>
+        <li><strong>Clear local data</strong> in Settings (device storage)</li>
+        <li><strong>Delete account</strong> in Settings (cloud account + local scrape data)</li>
+        <li>Sign out anytime; unpaid/optional AI features simply will not run without login where required</li>
+      </ul>
+
+      <h2>8. Children</h2>
+      <p>The Extension is not directed to children under 13. Do not use it if you are under the applicable age in your region.</p>
+
+      <h2>9. Changes</h2>
+      <p>We may update this policy. The “Last updated” date above will change when we do. Continued use after updates constitutes acceptance of the revised policy.</p>
+
+      <h2>10. Contact</h2>
+      <p>
+        Questions or data requests:
+        <a href="mailto:happyjwdev@gmail.com">happyjwdev@gmail.com</a>
+      </p>
+
+      <hr />
+      <p class="meta">Not affiliated with Amazon. For research aid only.</p>
+    </div>
+  </main>
+</body>
+</html>
