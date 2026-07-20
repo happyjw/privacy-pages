@@ -13,9 +13,8 @@
       window.location.replace(SUCCESS_URL);
     }
 
-    Paddle.Environment.set('sandbox');
     Paddle.Initialize({
-      token: 'test_b6e8525439115bd2cebe67ae17c',
+      token: 'live_568d6c0ba02e79c246a4bef4cb0',
       eventCallback: function (event) {
         if (event.name === 'checkout.completed') {
           goSuccess();

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../shared/policy.css" />
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
-    // Sandbox client-side token (Paddle.js). Swap for Live token when going live.
+    // Live client-side token (Paddle.js). Do not call Paddle.Environment.set('sandbox').
     var SUCCESS_URL = 'https://happjw.dev/amazon-review-analyzer/success.html';
 
     function goSuccess() {
@@ -15,9 +15,8 @@
       window.location.replace(SUCCESS_URL);
     }
 
-    Paddle.Environment.set('sandbox');
     Paddle.Initialize({
-      token: 'test_b6e8525439115bd2cebe67ae17c',
+      token: 'live_568d6c0ba02e79c246a4bef4cb0',
       eventCallback: function (event) {
         if (event.name === 'checkout.completed') {
           goSuccess();
