@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — Amazon Review Analyzer</title>
+  <link rel="stylesheet" href="../shared/policy.css" />
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script>
+    // Sandbox client-side token (Paddle.js). Swap for Live token when going live.
+    Paddle.Environment.set('sandbox');
+    Paddle.Initialize({
+      token: 'test_b6e8525439115bd2cebe67ae17c',
+      checkout: {
+        settings: {
+          displayMode: 'overlay',
+          theme: 'light',
+          successUrl: 'https://happjw.dev/amazon-review-analyzer/?checkout=success',
+        },
+      },
+    });
+    // When opened as default payment link (?_ptxn=txn_...), Paddle.js opens checkout automatically.
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/">← HappyJW</a>
+  </header>
+  <main>
+    <div class="card">
+      <h1>Checkout</h1>
+      <p class="meta">Amazon Review Analyzer Pro · Secure payment via Paddle</p>
+      <p>
+        If the payment window does not open automatically, return to the extension and try
+        <strong>Upgrade</strong> again.
+      </p>
+      <p>
+        After paying, go back to the Chrome extension and refresh — Pro unlocks via webhook.
+      </p>
+      <p><a href="./">← Back to product</a></p>
+    </div>
+  </main>
+</body>
+</html>
