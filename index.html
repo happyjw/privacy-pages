@@ -3,43 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policies — HappyJW</title>
+  <title>HappyJW — Software for sellers &amp; researchers</title>
+  <meta name="description" content="HappyJW builds commercial Chrome extensions and digital tools. Flagship product: Amazon Review Analyzer." />
   <link rel="stylesheet" href="./shared/policy.css" />
+  <style>
+    .hero h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+    .hero p.lead { font-size: 1.05rem; color: var(--muted); margin: 0 0 1.25rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 1rem 0 1.5rem; }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 650;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .btn.primary:hover { filter: brightness(1.05); }
+    .product-card h2 { margin: 0 0 0.35rem; font-size: 1.25rem; color: var(--accent); }
+    .price-line { font-weight: 650; color: var(--ink); margin: 0.75rem 0; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 1rem; font-size: 0.95rem; }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <a href="./">Privacy Pages</a>
+    <a href="/">HappyJW</a>
   </header>
   <main>
-    <div class="card">
-      <h1>Privacy Policies</h1>
-      <p class="meta">Public policies for HappyJW products. Each app has its own page.</p>
-      <ul class="app-list">
-        <li>
-          <a href="./apps/amazon-review-analyzer/">
-            Amazon Review Analyzer — Privacy
-            <span>Chrome Extension · reviews stay on-device; AI via proxy</span>
-          </a>
-        </li>
-        <li>
-          <a href="./apps/amazon-review-analyzer/pricing.html">
-            Amazon Review Analyzer — Pricing
-            <span>Free · Pro Monthly $9.99 · Pro Yearly $79</span>
-          </a>
-        </li>
-        <li>
-          <a href="./apps/amazon-review-analyzer/terms.html">
-            Amazon Review Analyzer — Terms of Service
-            <span>License, acceptable use, payments via Paddle</span>
-          </a>
-        </li>
-        <li>
-          <a href="./apps/amazon-review-analyzer/refunds.html">
-            Amazon Review Analyzer — Refund Policy
-            <span>14-day refund window for Pro</span>
-          </a>
-        </li>
-      </ul>
+    <div class="card hero">
+      <h1>HappyJW</h1>
+      <p class="lead">
+        Commercial digital products for sellers and researchers.
+        We sell software subscriptions — not a personal blog.
+      </p>
+      <p class="meta">Contact: <a href="mailto:happyjwdev@gmail.com">happyjwdev@gmail.com</a></p>
+
+      <article class="product-card">
+        <h2>Amazon Review Analyzer</h2>
+        <p>
+          Chrome extension that scrapes Amazon product reviews on-device, filters locally,
+          runs AI pros/cons analysis, and exports CSV. Supported: amazon.com &amp; amazon.sg.
+        </p>
+        <p class="price-line">Free · Pro Monthly $9.99 · Pro Yearly $79</p>
+        <div class="cta-row">
+          <a class="btn primary" href="/amazon-review-analyzer/pricing.html">View pricing</a>
+          <a class="btn" href="/amazon-review-analyzer/">Privacy policy</a>
+          <a class="btn" href="/amazon-review-analyzer/terms.html">Terms of service</a>
+          <a class="btn" href="/amazon-review-analyzer/refunds.html">Refund policy</a>
+        </div>
+        <p class="meta">
+          Buy Pro inside the Chrome extension after Google sign-in.
+          Checkout is processed by <strong>Paddle</strong> (Merchant of Record).
+        </p>
+      </article>
+
+      <hr />
+      <div class="footer-links">
+        <a href="/amazon-review-analyzer/pricing.html">Pricing</a>
+        <a href="/amazon-review-analyzer/terms.html">Terms</a>
+        <a href="/amazon-review-analyzer/">Privacy</a>
+        <a href="/amazon-review-analyzer/refunds.html">Refunds</a>
+        <a href="mailto:happyjwdev@gmail.com">Support</a>
+      </div>
+      <p class="meta" style="margin-top: 1.25rem;">
+        Not affiliated with Amazon. For research aid only.
+      </p>
     </div>
   </main>
 </body>
