@@ -8,14 +8,27 @@
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
     // Sandbox client-side token (Paddle.js). Swap for Live token when going live.
+    var SUCCESS_URL = 'https://happjw.dev/amazon-review-analyzer/success.html';
+
+    function goSuccess() {
+      // Immediate navigation — do not wait for Paddle's delayed successUrl redirect.
+      window.location.replace(SUCCESS_URL);
+    }
+
     Paddle.Environment.set('sandbox');
     Paddle.Initialize({
       token: 'test_b6e8525439115bd2cebe67ae17c',
+      eventCallback: function (event) {
+        if (event.name === 'checkout.completed') {
+          goSuccess();
+        }
+      },
       checkout: {
         settings: {
           displayMode: 'overlay',
           theme: 'light',
-          successUrl: 'https://happjw.dev/amazon-review-analyzer/?checkout=success',
+          variant: 'one-page',
+          successUrl: SUCCESS_URL,
         },
       },
     });
@@ -35,7 +48,7 @@
         <strong>Upgrade</strong> again.
       </p>
       <p>
-        After paying, go back to the Chrome extension and refresh — Pro unlocks via webhook.
+        After paying, this tab jumps to a success page — then go back to the Chrome extension.
       </p>
       <p><a href="./">← Back to product</a></p>
     </div>
